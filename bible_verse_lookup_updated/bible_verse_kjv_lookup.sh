@@ -38,6 +38,8 @@ if [ -z "$1" ]; then
 	echo -e "${yellowColour}Usage: you can search by entire page number by typing the page followed by the argument --page, -page, --page-number:${endColour} ${purpleColour}Example: ./bible_verse_kjv_lookup.sh 119 --page | grep -i 'favour', Example2 ./bible_verse_kjv_lookup.sh '592' --page | grep -i 'glory to god'${endColour}"
 	echo -e "${yellowColour}Usage: If you want the page number instead of the whole page, but can only remember the word or words try the argument --page-number, -pn, --pn, -number:${endColour} ${purpleColour}Example: ./bible_verse_kjv_lookup.sh 'sat like unto the Son of man' --page-number${endColour}"
 	echo -e "${yellowColour}Usage: (--range|-r|-range) After finding what line your search is on you can look through a range of line numbers:${endColour} ${purpleColour}Example: ./bible_verse_kjv_lookup.sh -r 49001 49050${endColour}"
+	# bible_verse_kjv_lookup.sh "Page 717" --very-verbose | grep "13:18" -A10 -B2
+	echo -e "${yellowColour}Usage: Here is an example command if someone just gives you a chapter and verse to look up.  ${endColour} ${purpleColour}Example: [./bible_verse_kjv_lookup.sh "{13:18}" --page-number] then lookup the page number with [./bible_verse_kjv_lookup.sh \"Page 717\" --very-verbose | grep \"13:18\" -A10 -B2] and you can grep the verse again.${endColour}"
     exit 1
 fi
 
@@ -59,6 +61,7 @@ if [[ $1 == @(-h|--help) ]]; then
 	echo -e "${yellowColour}Usage: You can search by entire page by typing the page followed by the argument --page, -page:${endColour} ${purpleColour}Example1: ./bible_verse_kjv_lookup.sh 119 --page | grep -i 'favour', Example2 ./bible_verse_kjv_lookup.sh '592' --page | grep -i 'glory to god'${endColour}"
 	echo -e "${yellowColour}Usage: If you want the page number instead of the whole page, but can only remember the word or words try the argument --page-number, -pn, --pn, -number:${endColour} ${purpleColour}Example: ./bible_verse_kjv_lookup.sh 'sat like unto the Son of man' --page-number${endColour}"
 	echo -e "${yellowColour}Usage: (--range|-r|-range) After finding what line your search is on you can look through a range of line numbers:${endColour} ${purpleColour}Example: ./bible_verse_kjv_lookup.sh -r 49001 49050${endColour}"
+	echo -e "${yellowColour}Usage: Here is an example command if someone just gives you a chapter and verse to look up.  ${endColour} ${purpleColour}Example: [./bible_verse_kjv_lookup.sh "{13:18}" --page-number] then lookup the page number with [./bible_verse_kjv_lookup.sh \"Page 717\" --very-verbose | grep \"13:18\" -A10 -B2] and you can grep the verse again.${endColour}"
 	exit 1
 fi
 echo
@@ -82,7 +85,7 @@ elif [[ -n "$1" && "$2" == @(--no-verbose|-no|-wo|-nv|-n|--words-only) ]]; then
 elif [[ -n "$1" && "$2" == @(--verbose|-vvv|-vv|-v) ]]; then 
 	cat $HOME/Downloads/bible_project/akjv.txt | grep -i -A20 -B10 --color=always "${1}" 
 elif [[ -n "$1" && "$2" == @(--very-verbose|-vvvv|-vvvvv|-vvvvvv) ]]; then 
-	cat $HOME/Downloads/bible_project/akjv.txt | grep -i -A40 -B40 --color=always "${1}" 
+	cat $HOME/Downloads/bible_project/akjv.txt | grep -i -A60 -B40 --color=always "${1}" 
 elif [[ -n "$1" && "$2" == @(--chapter|-chapter|--verse|-verse) ]]; then 
 	echo -e "${yellowColour}Only showing the chapter number and verse, ${endColour} ${purpleColour}no text.${endColour}"
 	echo
