@@ -4,7 +4,7 @@
 $ bible_verse_kjv_lookup.sh --help
 
 Today's date: 2025-07-23 05:16:19 UTC
-Usage: ./bible_verse_kjv_lookup.sh word or chapter to lookup> <argument>
+Usage: ./bible_verse_kjv_lookup.sh <word or chapter to lookup> <argument>
 -v,-vv,-vvv, --verbose (verbose), -vvvv,-vvvvvv, --very-verbose (very verbose), --no-verbose, -no, -wo, -nv, -n, --words-only (Remove verbosity)
 View Table of Contents. Example:  ./bible_verse_kjv_lookup.sh tableofcontents or ./bible_verse_kjv_lookup.sh --table
 -chapter, --chapter, -verse, --verse (only show the chapter & verse the word is in, no text)
@@ -17,3 +17,4 @@ Usage: If you are looking for multiple words and do not know the chapter just su
 Usage: You can search by entire page by typing the page followed by the argument --page, -page: Example1: ./bible_verse_kjv_lookup.sh 119 --page | grep -i 'favour', Example2 ./bible_verse_kjv_lookup.sh '592' --page | grep -i 'glory to god'
 Usage: If you want the page number instead of the whole page, but can only remember the word or words try the argument --page-number, -pn, --pn, -number: Example: ./bible_verse_kjv_lookup.sh 'sat like unto the Son of man' --page-number
 Usage: (--range|-r|-range) After finding what line your search is on you can look through a range of line numbers: Example: ./bible_verse_kjv_lookup.sh -r 49001 49050
+Usage: Here is an example command if someone just gives you a chapter and verse to look up.   Example: [./bible_verse_kjv_lookup.sh {13:18} --page-number] then lookup the page number with [./bible_verse_kjv_lookup.sh "Page 717" --very-verbose | grep "13:18" -A10 -B2] and you can grep the verse again.
