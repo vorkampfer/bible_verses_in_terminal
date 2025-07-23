@@ -3,7 +3,8 @@
 ## Here is the help menu
 $ bible_verse_kjv_lookup.sh --help
 Today's date: 2025-07-23 05:16:19 UTC
-Usage: ./bible_verse_kjv_lookup.sh <word or chapter to lookup> <argument>
+
+Usage: ./bible_verse_kjv_lookup.sh word or chapter to lookup> <argument>
 -v,-vv,-vvv, --verbose (verbose), -vvvv,-vvvvvv, --very-verbose (very verbose), --no-verbose, -no, -wo, -nv, -n, --words-only (Remove verbosity)
 View Table of Contents. Example:  ./bible_verse_kjv_lookup.sh tableofcontents or ./bible_verse_kjv_lookup.sh --table
 -chapter, --chapter, -verse, --verse (only show the chapter & verse the word is in, no text)
