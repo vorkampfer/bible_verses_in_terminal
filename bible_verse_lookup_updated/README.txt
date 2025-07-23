@@ -1,6 +1,6 @@
-<h2>Look up bible verses with this bash script. It has a good help menu. You may need to make adjustments to the bash script. Such as changing directories etc...</h2>
+## Look up bible verses with this bash script. It has a good help menu. You may need to make adjustments to the bash script. Such as changing directories etc..
 
-<h2>Here is the help menu:</h2>
+## Here is the help menu
 $ bible_verse_kjv_lookup.sh --help
 Today's date: 2025-07-23 05:16:19 UTC
 Usage: ./bible_verse_kjv_lookup.sh <word or chapter to lookup> <argument>
